@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="width=device-width" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産シュミレーション</title>
+    <mate name="description" content="建築提案をする際に必要な情報を計算します">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assts/css/sanitize.css">
+    <link rel="stylesheet" href="./assts/css/style.css">
+</head>
+<body>
+
+  <h1 class="title">不動産シュミレーション</h1>
+  
+  <article>
+    <div class="main">
+      <h2 class="instruction">
+        ～使い方～
+        <p>メニューの中から計算したい項目をクリックします。</p>
+        <p>必要事項を入力して計算ボタンをクリックすると計算結果が表示されます。</p>
+      </h2>
+
+      <h2 class="instruction">
+        ～各項目について～
+        <ul class="calculationList">
+          <li>建築費・・・面積と容積率と坪単価を入力することで建築費の概算を算出します</li>
+          <li>固定資産税(簡易)・・・面積と固定資産税路線価を入力し固定資産税評価額と年間の固都税支払い額を算出します。</li>
+          <li>固定資産税・・・簡易に入力するものに加え詳細条件を入力し固定資産税評価額と年間固都税支払い額を算出します。</li>
+          <li>相続税(簡易)・・・面積と相続税路線価を入力し相続税評価額を算出します。</li>
+          <li>相続税・・・簡易に入力するものに加え相続人数、現況等の詳細条件を入力し相続税評価額を算出します。</li>
+          <li>収支シュミレーション(簡易)・・・年間収入とおおよその返済額のみを考慮し年間収支を算出します。</li>
+          <li>収支シュミレーション・・・自己資金や固定資産税なども考慮し年間収支を算出します。</li>
+        </ul>
+      </h2>
+    </div>
+    <div class="side">
+      <h3 class="menu">メニュー</h3>
+      <ul class="nav_list">
+        <li class="nav_item"><a href="index.html">ホーム</a></li>
+        <li class="nav_item"><a href="cost.html">建築費</a></li>
+        <li class="nav_item"><a href="simpl_real_estate_tax.html">固定資産税(簡易)</a></li>
+        <li class="nav_item"><a href="real_estate_tax.html">固定資産税</a></li>
+        <li class="nav_item"><a href="simple_inheritance_tax.html">相続税(簡易)</a></li>
+        <li class="nav_item"><a href="inheritance_tax.html">相続税</a></li>
+        <li class="nav_item"><a href="simpl_pay.html">収支シュミレーション(簡易)</a></li>
+        <li class="nav_item"><a href="pay.html">収支シュミレーション</a></li>
+      </ul>
+    </div>
+  </article>
+
+  <h3 class="remarks">
+    注意事項
+    <p>このサイトの計算結果はあくまで参考にしてください。</p>
+  </h3>
+
+    <script src="./assts/js/app.js"></script>
+</body>
+</html>

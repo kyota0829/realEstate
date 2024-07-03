@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="width=device-width" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産シュミレーション</title>
+    <mate name="description" content="建築提案をする際に必要な情報を計算します">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assts/css/sanitize.css">
+    <link rel="stylesheet" href="./assts/css/style.css">
+</head>
+<body>
+
+  <h1 class="title">不動産シュミレーション</h1>
+  
+  <article>
+    <div class="main">
+      <h2 class="instruction">～相続税～</h2>
+<!-- form -->
+      <form action="#" id="form" class="form">
+        <table class="formTable">
+          <tr>
+            <th>
+                面積：
+            </th>
+            <td>
+              <input type="number" name="area" step="0.01" class="input">
+            </td>
+            <th>
+                ㎡
+            </th>
+          </tr>
+          <tr>
+            <th>
+                相続税路線価：
+            </th>
+            <td>
+                <input type="number" name="inheritanceTax" step="0.01" class="input">
+            </td>
+            <th>
+                万円
+            </th>
+          </tr>
+          <tr>
+            <th>
+                相続人数：
+            </th>
+            <td>
+                <input type="number" name="heir" class="input">
+            </td>
+            <th>
+                人
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <select name="category" id="category">
+                <option value="">利用区分</option>
+                <option value="residential">居住用宅地</option>
+                <option value="business">特定事業用宅地</option>
+                <option value="loanBusiness">貸付事業用宅地</option>
+                <option value="other">その他</option>
+              </select>
+            </th>
+          </tr>
+        </table>
+      </form>
+      <input type="submit" value="計算" onclick="calculateInheritanceTax(event)" class="submit">
+
+<!-- output -->
+        <table class="outputTable">
+          <tr>
+            <th>
+                相続税評価額：
+            </th>
+            <td>
+                <p id="inheritanceValue" class="output"></p>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              課税遺産総額：
+              <td>
+                <p id="inheritanceTaxable"></p>
+              </td>
+            </th>
+          </tr>
+        </table>
+      </div>
+<!-- サイドメニュー -->
+      <div class="side">
+        <h3 class="menu">メニュー</h3>
+        <ul class="nav_list">
+          <li class="nav_item"><a href="index.html">ホーム</a></li>
+          <li class="nav_item"><a href="cost.html">建築費</a></li>
+          <li class="nav_item"><a href="simpl_real_estate_tax.html">固定資産税(簡易)</a></li>
+          <li class="nav_item"><a href="real_estate_tax.html">固定資産税</a></li>
+          <li class="nav_item"><a href="simple_inheritance_tax.html">相続税(簡易)</a></li>
+          <li class="nav_item"><a href="inheritance_tax.html">相続税</a></li>
+          <li class="nav_item"><a href="simpl_pay.html">収支シュミレーション(簡易)</a></li>
+          <li class="nav_item"><a href="pay.html">収支シュミレーション</a></li>
+        </ul>
+      </div>
+    </article>
+  
+    <h3 class="remarks">
+      注意事項
+      <p>小規模宅地の特例を適用することができます。</p>
+      <p>居住用宅地の場合は330㎡までを80%減額</p>
+      <p>特定事業用宅地の場合は400㎡までを80%減額</p>
+      <p>貸付事業用宅地の場合は200㎡までを50%減額</p>
+      <p>基礎控除額は3000万円+(相続人数×600万円)で算出しています。</p>
+    </h3>
+
+    <script src="./assts/js/app.js"></script>
+
+</body>
+</html>

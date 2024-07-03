@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="width=device-width" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産シュミレーション</title>
+    <mate name="description" content="建築提案をする際に必要な情報を計算します">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assts/css/sanitize.css">
+    <link rel="stylesheet" href="./assts/css/style.css">
+</head>
+<body>
+
+  <h1 class="title">不動産シュミレーション</h1>
+  
+  <article>
+    <div class="main">
+      <h2 class="instruction">～収益シュミレーション(簡易)～</h2>
+<!-- form -->
+      <form action="#" id="form" class="form">
+        <table class="formTable">
+        <tr>
+          <th>
+              面積：
+          </th>
+          <td>
+          <input type="number" name="area" step="0.01" class="input">
+          </td>
+          <th>
+              ㎡
+          </th>
+        </tr>
+        <tr>
+          <th>
+              容積率：
+          </th>
+          <td>
+              <input type="number" name="volume" class="input">
+          </td>
+          <th>
+              %
+          </th>
+        </tr>
+        <tr>
+          <th>
+              建築費(坪単価)：
+          </th>
+          <td>
+              <input type="number" name="price" class="input">
+          </td>
+          <th>
+              万円
+          </th>
+        </tr>
+        <tr>
+          <th>
+              家賃(㎡単価)：
+          </th>
+          <td>
+              <input type="number" name="rent" class="input">
+          </td>
+          <th>
+              円
+          </th>
+        </tr>
+        </table>
+    </form>
+    <input type="submit" value="計算" class="submit" onclick="calculateCost(event), calProfit(event)">
+
+<!-- output -->
+    <table class="outputTable">
+      <tr>
+        <th>
+            総工費：
+        </th>
+        <td>
+            <p id="cost" class="output"></p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+            手残り：
+        </th>
+        <td>
+            <p id="leftovers" class="output"></p>
+        </td>
+      </tr>
+      <tr>
+        <th>
+            実質利回り：
+        </th>
+        <td>
+            <p id="yield" class="output"></p>
+        </td>
+      </tr> 
+    </table>
+  </div>
+  <!-- サイドメニュー -->
+  <div class="side">
+    <h3 class="menu">メニュー</h3>
+    <ul class="nav_list">
+      <li class="nav_item"><a href="index.html">ホーム</a></li>
+      <li class="nav_item"><a href="cost.html">建築費</a></li>
+      <li class="nav_item"><a href="simpl_real_estate_tax.html">固定資産税(簡易)</a></li>
+      <li class="nav_item"><a href="real_estate_tax.html">固定資産税</a></li>
+      <li class="nav_item"><a href="simple_inheritance_tax.html">相続税(簡易)</a></li>
+      <li class="nav_item"><a href="inheritance_tax.html">相続税</a></li>
+      <li class="nav_item"><a href="simpl_pay.html">収支シュミレーション(簡易)</a></li>
+      <li class="nav_item"><a href="pay.html">収支シュミレーション</a></li>
+    </ul>
+  </div>
+</article>
+
+<h3 class="remarks">
+  注意事項
+  <p>総工費は坪数 × 容積率 × 坪単価 × 1.5(容積対象外の建築坪数想定) × 1.15(諸経費) + 2000万円(解体費)で算出しています。</p>
+  <p>月々返済額は総工費×0.003(概算値)で算出しています。</p>
+  <p>月々収入額は土地面積×容積率×家賃で算出しています。</p>
+</h3>
+
+<script src="./assts/js/app.js"></script>
+
+</body>
+</html>

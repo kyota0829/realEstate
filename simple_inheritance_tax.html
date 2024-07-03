@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="width=device-width" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産シュミレーション</title>
+    <mate name="description" content="建築提案をする際に必要な情報を計算します">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assts/css/sanitize.css">
+    <link rel="stylesheet" href="./assts/css/style.css">
+</head>
+<body>
+       
+  <h1 class="title">不動産シュミレーション</h1>
+  
+  <article>
+    <div class="main">
+      <h2 class="instruction">～相続税(簡易)～</h2>
+        <form action="#" id="form" class="form">
+          <table class="formTable">
+            <tr>
+              <th>
+                面積：
+              </th>
+              <td>
+                <input type="number" name="area" step="0.01" class="input">
+              </td>
+              <th>
+                ㎡
+              </th>
+            </tr>
+            <tr>
+              <th>
+                相続税路線価：
+              </th>
+              <td>
+                <input type="number" name="inheritanceTax" step="0.01" class="input">
+              </td>
+              <th>
+                万円
+              </th>
+            </tr>
+          </table>
+        </form>
+        <input type="submit" value="計算" class="submit" onclick="calInheritanceTax(event)">
+
+<!-- output -->
+        <table class="outputTable">
+          <tr>
+            <th>
+              相続税評価額：
+            </th>
+            <td>
+              <p id="inheritanceValue" class="output"></p>
+            </td>
+          </tr>
+        </table>
+    </div>
+<!-- サイドメニュー -->
+    <div class="side">
+      <h3 class="menu">メニュー</h3>
+      <ul class="nav_list">
+        <li class="nav_item"><a href="index.html">ホーム</a></li>
+        <li class="nav_item"><a href="cost.html">建築費</a></li>
+        <li class="nav_item"><a href="simpl_real_estate_tax.html">固定資産税(簡易)</a></li>
+        <li class="nav_item"><a href="real_estate_tax.html">固定資産税</a></li>
+        <li class="nav_item"><a href="simple_inheritance_tax.html">相続税(簡易)</a></li>
+        <li class="nav_item"><a href="inheritance_tax.html">相続税</a></li>
+        <li class="nav_item"><a href="simpl_pay.html">収支シュミレーション(簡易)</a></li>
+        <li class="nav_item"><a href="pay.html">収支シュミレーション</a></li>
+      </ul>
+    </div>
+  </article>
+  
+  <h3 class="remarks">
+    注意事項
+    <p>このサイトの計算結果はあくまで参考にしてください。</p>
+  </h3>
+
+<script src="./assts/js/app.js"></script>
+
+</body>
+</html>
