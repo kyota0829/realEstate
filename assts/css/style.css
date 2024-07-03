@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* base style */
+body {
+    font-family:  "Noto Sans JP",  "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #c3f2ff;
+  }
+
+/* title */
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  height: 80px;
+  background-color: #c3f2ff;
+  margin: 25px 0 0 0;
+}
+
+/* main */
+
+.main {
+  background-color: #fffaed;
+  width: 78%;
+}
+
+.instruction {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.instruction p {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: left;
+  margin: 5px;
+}
+
+.calculationList {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px){
+  .main {
+    width: 100%;
+  }
+
+  .instruction {
+    font-size: 24px;
+  }
+
+  .instruction p {
+    font-size: 14px;
+  }
+
+  .calculationList {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+/* 注意事項 */
+.remarks {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #c3f2ff;
+}
+
+.remarks p {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  margin: 5px 0 0 10px;
+}
+
+@media screen and (max-width: 768px){
+  .remarks {
+    font-size: 20px;
+  }
+
+  .remarks p {
+    font-size: 12px;
+  }
+}
+
+/* サイドバー */
+article {
+  display: flex;
+  background-color: #fffaed;
+}
+
+.side {
+  background-color: #fffaed;
+  border-style: none none none double;
+  border-width: 4px;
+  border-color: #c3f2ff;
+}
+
+.menu {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav_list {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.nav_item {
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side {
+    border-style: double none none none;
+    margin: 15px 0;
+  }
+}
+
+/* form */
+.form {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.formTable tr {
+  font-size: 18x;
+}
+
+.formTable th {
+  text-align: right;
+}
+
+.formTable select {
+  padding: 5px 20px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  padding: 5px 60px;
+}
+
+/* output */
+.outputTable {
+  font-size: 18px;
+  margin: 0 auto;
+  color: #f98fab;
+  text-align: right;
+}
